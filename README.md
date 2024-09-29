@@ -1,6 +1,6 @@
 # **Portfolio**
 
-![License](https://img.shields.io/github/license/yourusername/portfolio) ![Version](https://img.shields.io/github/v/release/yourusername/portfolio) ![Issues](https://img.shields.io/github/issues/yourusername/portfolio)
+![License](https://img.shields.io/github/license/sadkingo/portfolio) ![Version](https://img.shields.io/github/v/release/sadkingo/portfolio) ![Issues](https://img.shields.io/github/issues/sadkingo/portfolio)
 
 ## 🚀 **Project Overview**
 
@@ -9,6 +9,7 @@
 ---
 
 ## 🎯 **Features**
+
 - **Project Showcase**: A section to display my projects with descriptions, images, and live links.
 - **Skills Section**: Highlights the technical skills used in my projects.
 - **Blog Integration**: A blog page powered by **Laravel** for sharing insights and updates.
@@ -18,41 +19,43 @@
 ---
 
 ## 🛠️ **Technologies Used**
+
 - **HTML5**
 - **CSS3**
 - **JavaScript**
 - **React**
 - **Laravel**
-  
+
 ---
 
 ## 📦 **Installation**
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/portfolio.git
-    ```
+   ```bash
+   git clone https://github.com/sadkingo/portfolio.git
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd portfolio
-    ```
+   ```bash
+   cd portfolio
+   ```
 3. Install dependencies for both front-end and back-end:
-    ```bash
-    npm install     # For React
-    composer install # For Laravel
-    ```
+   ```bash
+   npm install     # For React
+   composer install # For Laravel
+   ```
 4. Set up the environment:
-    - Configure `.env` for Laravel, setting up your database and other environment variables.
+
+   - Configure `.env` for Laravel, setting up your database and other environment variables.
 
 5. Run the development server:
-    - For React:
-      ```bash
-      npm start
-      ```
-    - For Laravel:
-      ```bash
-      php artisan serve
-      ```
+   - For React:
+     ```bash
+     npm start
+     ```
+   - For Laravel:
+     ```bash
+     php artisan serve
+     ```
 
 ---
 
@@ -70,4 +73,4 @@ This project is licensed under the MIT License.
 
 ## 📞 **Contact**
 
-For any inquiries or feedback, you can reach me at [your-email@example.com].
+For any inquiries or feedback, you can reach me at [DhiabMohammedZakaria@gmail.com].
