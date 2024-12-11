@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
+import tailwindDelay from "tailwindcss-animation-delay";
 
 export default {
   content: [
@@ -7,13 +8,40 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
   theme: {
     extend: {
+      animation: {
+        "slide-in-top":
+          "slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
+        "slide-in-bottom":
+          "slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
+      },
+      keyframes: {
+        "slide-in-top": {
+          "0%": { transform: "translateY(-1000px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        "slide-in-bottom": {
+          "0%": { transform: "translateY(1000px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animationDelay: {
+        "400": "400ms",
+        "550": "550ms",
+        "750": "750ms",
+        "850": "850ms",
+        "900": "900ms",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [daisyui],
+  darkMode: ["selector", '[data-theme="dark"]'],
+  plugins: [daisyui, tailwindDelay],
 } satisfies Config;
