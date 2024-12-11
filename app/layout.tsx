@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./NavBar";
+import Background from "./components/background";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,9 +27,14 @@ export default function RootLayout({
           type="image/x-icon"
         />
       </head>
-      <body className={`${inter.className} antialiased min-h-screan`}>
+      <body
+        className={`${inter.className} flex flex-col min-h-screen bg-slate-300 dark:bg-inherit antialiased overflow-hidden`}
+      >
         <NavBar />
-        {children}
+        <main className="relative flex-1 shadow-lg">
+          {children}
+          <Background />
+        </main>
       </body>
     </html>
   );
