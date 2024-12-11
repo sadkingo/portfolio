@@ -18,10 +18,11 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@public/*": ["/public/*"],
-      "@images/*": ["/public/images/*"]
+      "@public/*": ["public/*"],
+      "@images/*": ["public/images/*"]
     }
   },
   "include": [
