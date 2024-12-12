@@ -3,7 +3,12 @@
     y="0px" viewBox="0 0 1077 683" style="enable-background:new 0 0 1077 683;" xml:space="preserve"
     preserveAspectRatio="none">
     <style type="text/css">
+        [data-theme="dark"] #layer-4 .st0 {
+            fill: oklch(var(--sc));
+        }
+
         #layer-4 .st0 {
+            transition: all 0.5s ease-in-out;
             fill: #EF4335;
         }
     </style>

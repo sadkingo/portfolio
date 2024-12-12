@@ -3,10 +3,19 @@
     y="0px" viewBox="0 0 1077 683" preserveAspectRatio="none">
     <style type="text/css">
         #layer-3 .st0 {
+            transition: all 0.5s ease-in-out;
             fill: #FC7D48;
         }
 
+        [data-theme="dark"] #layer-3 .st0 {
+            fill:oklch(var(--pc))
+        }
+
+        [data-theme="dark"] #layer-3 .st1 {
+            fill:oklch(var(--p));
+        }
         #layer-3 .st1 {
+            transition: all 0.5s ease-in-out;
             fill: #FF9E49;
         }
     </style>
