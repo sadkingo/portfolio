@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
 import tailwindDelay from "tailwindcss-animation-delay";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -53,5 +54,18 @@ export default {
     },
   },
   darkMode: ["selector", '[data-theme="dark"]'],
-  plugins: [daisyui, tailwindDelay],
+  plugins: [
+    daisyui,
+    tailwindDelay,
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "animate-duration": (value) => ({
+            animationDuration: value,
+          }),
+        },
+        { values: theme("transitionDuration") },
+      );
+    }),
+  ],
 } satisfies Config;
