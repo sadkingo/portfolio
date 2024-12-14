@@ -28,7 +28,11 @@ const SleepingCat = ({ className }) => {
       wakeAnimation.current.play();
       catRef.current?.classList.add("close");
     }
-
+    return () => {
+      for (const timeline of animations.entries()) {
+        timeline[1].kill();
+      }
+    };
   });
 
   const handleCatClick = () => {
