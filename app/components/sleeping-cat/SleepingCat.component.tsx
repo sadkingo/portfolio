@@ -50,14 +50,14 @@ const SleepingCat = ({ className }) => {
   }
 
   return (
-    <div className="relative flex items-center justify-center">
-      <div ref={catRef} className="absolute right-0 h-18 w-max -top-4">
+    <div className={className}>
+      <div ref={catRef}>
         <SleepingCatSvg
           onClick={() => {
             handleCatClick();
             handleThemeChange();
           }}
-          width="157"
+          width="175"
           className="drop-shadow-md"
         />
       </div>
