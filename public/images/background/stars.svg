@@ -1,25 +1,31 @@
-<svg id="stars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1838.83 1020.83" >
+<svg id="stars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1838.83 1020.83">
   <defs>
     <style>
       .cls-1 {
         fill: #efefef;
       }
+
       #small circle:nth-child(even) {
         animation: starsBlink 2.7s ease-in-out infinite alternate;
       }
+
       #small circle:nth-child(odd) {
         animation: starsBlink 1.5s ease-in-out infinite alternate;
       }
+
       #big circle:nth-child(even) {
         animation: starsBlink 3s ease-in-out infinite alternate;
       }
+
       #big circle:nth-child(odd) {
         animation: starsBlink 1.7s ease-in-out infinite alternate;
       }
+
       @keyframes starsBlink {
         0% {
           opacity: 0.2;
         }
+
         100% {
           opacity: 1;
         }
@@ -28,58 +34,58 @@
   </defs>
   <title>stars</title>
   <g id="big">
-    <circle class="cls-1" cx="80.92" cy="88.92" r="3.92"/>
-    <circle class="cls-1" cx="1013.92" cy="225.92" r="3.92"/>
-    <circle class="cls-1" cx="574.92" cy="282.92" r="3.92"/>
-    <circle class="cls-1" cx="1164.92" cy="41.92" r="3.92"/>
-    <circle class="cls-1" cx="682.92" cy="139.92" r="3.92"/>
-    <circle class="cls-1" cx="1389.92" cy="602.92" r="3.92"/>
-    <circle class="cls-1" cx="892.92" cy="317.92" r="3.92"/>
-    <circle class="cls-1" cx="97.92" cy="445.92" r="3.92"/>
-    <circle class="cls-1" cx="253.92" cy="290.92" r="3.92"/>
-    <circle class="cls-1" cx="1548.92" cy="120.92" r="3.92"/>
-    <circle class="cls-1" cx="1683.92" cy="377.92" r="3.92"/>
-    <circle class="cls-1" cx="1551.92" cy="655.92" r="3.92"/>
-    <circle class="cls-1" cx="628.92" cy="230.92" r="3.92"/>
-    <circle class="cls-1" cx="886.92" cy="791.92" r="3.92"/>
+    <circle class="cls-1" cx="80.92" cy="88.92" r="3.92" />
+    <circle class="cls-1" cx="1013.92" cy="225.92" r="3.92" />
+    <circle class="cls-1" cx="574.92" cy="282.92" r="3.92" />
+    <circle class="cls-1" cx="1164.92" cy="41.92" r="3.92" />
+    <circle class="cls-1" cx="682.92" cy="139.92" r="3.92" />
+    <circle class="cls-1" cx="1389.92" cy="602.92" r="3.92" />
+    <circle class="cls-1" cx="892.92" cy="317.92" r="3.92" />
+    <circle class="cls-1" cx="97.92" cy="445.92" r="3.92" />
+    <circle class="cls-1" cx="253.92" cy="290.92" r="3.92" />
+    <circle class="cls-1" cx="1548.92" cy="120.92" r="3.92" />
+    <circle class="cls-1" cx="1683.92" cy="377.92" r="3.92" />
+    <circle class="cls-1" cx="1551.92" cy="655.92" r="3.92" />
+    <circle class="cls-1" cx="628.92" cy="230.92" r="3.92" />
+    <circle class="cls-1" cx="886.92" cy="791.92" r="3.92" />
   </g>
   <g id="small">
-    <circle class="cls-1" cx="947.92" cy="286.92" r="1.92"/>
-    <circle class="cls-1" cx="373.92" cy="230.92" r="1.92"/>
-    <circle class="cls-1" cx="598.92" cy="101.92" r="1.92"/>
-    <circle class="cls-1" cx="1293.92" cy="23.92" r="1.92"/>
-    <circle class="cls-1" cx="1479.92" cy="151.92" r="1.92"/>
-    <circle class="cls-1" cx="1506.92" cy="218.92" r="1.92"/>
-    <circle class="cls-1" cx="1176.92" cy="332.92" r="1.92"/>
-    <circle class="cls-1" cx="1260.92" cy="239.92" r="1.92"/>
-    <circle class="cls-1" cx="1593.92" cy="665.92" r="1.92"/>
-    <circle class="cls-1" cx="1015.92" cy="692.92" r="1.92"/>
-    <circle class="cls-1" cx="742.92" cy="740.92" r="1.92"/>
-    <circle class="cls-1" cx="712.92" cy="654.92" r="1.92"/>
-    <circle class="cls-1" cx="595.92" cy="428.92" r="1.92"/>
-    <circle class="cls-1" cx="337.92" cy="551.92" r="1.92"/>
-    <circle class="cls-1" cx="142.92" cy="665.92" r="1.92"/>
-    <circle class="cls-1" cx="46.92" cy="311.92" r="1.92"/>
-    <circle class="cls-1" cx="232.92" cy="96.92" r="1.92"/>
-    <circle class="cls-1" cx="391.92" cy="94.92" r="1.92"/>
-    <circle class="cls-1" cx="421.92" cy="104.92" r="1.92"/>
-    <circle class="cls-1" cx="952.92" cy="167.92" r="1.92"/>
-    <circle class="cls-1" cx="1512.92" cy="572.92" r="1.92"/>
-    <circle class="cls-1" cx="1317.92" cy="389.92" r="1.92"/>
-    <circle class="cls-1" cx="454.92" cy="752.92" r="1.92"/>
-    <circle class="cls-1" cx="1051.92" cy="32.92" r="1.92"/>
-    <circle class="cls-1" cx="577.92" cy="83.92" r="1.92"/>
-    <circle class="cls-1" cx="1749.92" cy="1.92" r="1.92"/>
-    <circle class="cls-1" cx="1800.92" cy="122.92" r="1.92"/>
-    <circle class="cls-1" cx="1836.92" cy="87.92" r="1.92"/>
-    <circle class="cls-1" cx="1194.92" cy="100.92" r="1.92"/>
-    <circle class="cls-1" cx="622.92" cy="106.92" r="1.92"/>
-    <circle class="cls-1" cx="1.92" cy="68.92" r="1.92"/>
-    <circle class="cls-1" cx="1284.92" cy="618.92" r="1.92"/>
-    <circle class="cls-1" cx="1743.92" cy="607.92" r="1.92"/>
-    <circle class="cls-1" cx="1809.92" cy="587.92" r="1.92"/>
-    <circle class="cls-1" cx="382.92" cy="603.92" r="1.92"/>
-    <circle class="cls-1" cx="40.92" cy="764.92" r="1.92"/>
-    <circle class="cls-1" cx="115.92" cy="44.92" r="1.92"/>
+    <circle class="cls-1" cx="947.92" cy="286.92" r="1.92" />
+    <circle class="cls-1" cx="373.92" cy="230.92" r="1.92" />
+    <circle class="cls-1" cx="598.92" cy="101.92" r="1.92" />
+    <circle class="cls-1" cx="1293.92" cy="23.92" r="1.92" />
+    <circle class="cls-1" cx="1479.92" cy="151.92" r="1.92" />
+    <circle class="cls-1" cx="1506.92" cy="218.92" r="1.92" />
+    <circle class="cls-1" cx="1176.92" cy="332.92" r="1.92" />
+    <circle class="cls-1" cx="1260.92" cy="239.92" r="1.92" />
+    <circle class="cls-1" cx="1593.92" cy="665.92" r="1.92" />
+    <circle class="cls-1" cx="1015.92" cy="692.92" r="1.92" />
+    <circle class="cls-1" cx="742.92" cy="740.92" r="1.92" />
+    <circle class="cls-1" cx="712.92" cy="654.92" r="1.92" />
+    <circle class="cls-1" cx="595.92" cy="428.92" r="1.92" />
+    <circle class="cls-1" cx="337.92" cy="551.92" r="1.92" />
+    <circle class="cls-1" cx="142.92" cy="665.92" r="1.92" />
+    <circle class="cls-1" cx="46.92" cy="311.92" r="1.92" />
+    <circle class="cls-1" cx="232.92" cy="96.92" r="1.92" />
+    <circle class="cls-1" cx="391.92" cy="94.92" r="1.92" />
+    <circle class="cls-1" cx="421.92" cy="104.92" r="1.92" />
+    <circle class="cls-1" cx="952.92" cy="167.92" r="1.92" />
+    <circle class="cls-1" cx="1512.92" cy="572.92" r="1.92" />
+    <circle class="cls-1" cx="1317.92" cy="389.92" r="1.92" />
+    <circle class="cls-1" cx="454.92" cy="752.92" r="1.92" />
+    <circle class="cls-1" cx="1051.92" cy="32.92" r="1.92" />
+    <circle class="cls-1" cx="577.92" cy="83.92" r="1.92" />
+    <circle class="cls-1" cx="1749.92" cy="1.92" r="1.92" />
+    <circle class="cls-1" cx="1800.92" cy="122.92" r="1.92" />
+    <circle class="cls-1" cx="1836.92" cy="87.92" r="1.92" />
+    <circle class="cls-1" cx="1194.92" cy="100.92" r="1.92" />
+    <circle class="cls-1" cx="622.92" cy="106.92" r="1.92" />
+    <circle class="cls-1" cx="1.92" cy="68.92" r="1.92" />
+    <circle class="cls-1" cx="1284.92" cy="618.92" r="1.92" />
+    <circle class="cls-1" cx="1743.92" cy="607.92" r="1.92" />
+    <circle class="cls-1" cx="1809.92" cy="587.92" r="1.92" />
+    <circle class="cls-1" cx="382.92" cy="603.92" r="1.92" />
+    <circle class="cls-1" cx="40.92" cy="764.92" r="1.92" />
+    <circle class="cls-1" cx="115.92" cy="44.92" r="1.92" />
   </g>
 </svg>
