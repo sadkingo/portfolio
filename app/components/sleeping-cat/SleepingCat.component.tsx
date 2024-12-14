@@ -4,11 +4,13 @@ import React, { useEffect, useRef } from "react";
 import SleepingCatSvg from "@images/sleeping-cat.svg";
 import { catClick, catAnimate } from "./SleepingCat.motion";
 
-const SleepingCat = () => {
-  let animations: Map<string, any>;
+const SleepingCat = ({ className }) => {
+  let animations: Map<string, gsap.core.Timeline>;
   const catRef = useRef<HTMLDivElement>(null);
-  // @ts-expect-error error in gasp types!!
-  const wakeAnimation = useRef(gsap.timeline({ paused: true }));
+
+  const wakeAnimation = useRef<gsap.core.Timeline>(
+    gsap.timeline({ paused: true }),
+  );
 
   useEffect(() => {
     const currentStoredTheme = localStorage.getItem("theme");
@@ -20,6 +22,7 @@ const SleepingCat = () => {
     } else {
       document.documentElement.setAttribute("data-theme", currentStoredTheme);
     }
+
     animations = catAnimate({ wakeAnimation });
     if (currentStoredTheme !== "dark") {
       wakeAnimation.current.play();
