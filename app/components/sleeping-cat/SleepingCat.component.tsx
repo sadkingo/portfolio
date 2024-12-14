@@ -35,13 +35,13 @@ const SleepingCat = ({ className }) => {
     };
   });
 
-  const handleCatClick = () => {
+  function handleCatClick() {
     // wait for the click animation
-    animations.get("tail").pause();
-    setTimeout(() => animations.get("tail").play(), 1000);
+    animations.get("tail")!.pause();
+    setTimeout(() => animations.get("tail")!.play(), 1000);
 
     catClick({ wakeAnimation, catRef });
-  };
+  }
   function handleThemeChange() {
     const currentStoredTheme = localStorage.getItem("theme");
     const reversedTheme = currentStoredTheme === "dark" ? "light" : "dark";
