@@ -1,8 +1,8 @@
 import React from "react";
 import SleepingCat from "./SleepingCat.component";
 
-const SleepingCatContainer = () => {
-  return <SleepingCat />;
+const SleepingCatContainer = ({className = ""}) => {
+  return <SleepingCat className={className} />;
 };
 
 export default SleepingCatContainer;
