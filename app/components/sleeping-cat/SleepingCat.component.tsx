@@ -55,7 +55,7 @@ const SleepingCat = ({ className }) => {
         <SleepingCatSvg
           onClick={() => {
             handleCatClick();
-            handleThemeChange();
+            setTimeout(() => handleThemeChange(), 500);
           }}
           width="175"
           className="drop-shadow-md"
