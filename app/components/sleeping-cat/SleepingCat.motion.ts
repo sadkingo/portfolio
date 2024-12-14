@@ -1,6 +1,10 @@
 import gsap from "gsap";
+import React from "react";
 
-function catAnimate({ wakeAnimation }): Map<string, any> {
+interface Props {
+  wakeAnimation: React.RefObject<gsap.core.Timeline>;
+}
+function catAnimate({ wakeAnimation }: Props): Map<string, gsap.core.Timeline> {
   const animations = new Map();
   // animations
   gsap.defaults({ ease: "linear" });
@@ -98,7 +102,11 @@ function catAnimate({ wakeAnimation }): Map<string, any> {
   return animations;
 }
 
-function catClick({ wakeAnimation, catRef }): void {
+interface ClickProps {
+  wakeAnimation: React.RefObject<gsap.core.Timeline>;
+  catRef: React.RefObject<HTMLDivElement | null>;
+}
+function catClick({ wakeAnimation, catRef }: ClickProps): void {
   gsap.timeline({ repeat: 1, yoyo: true }).to("#tail", {
     ease: "power1.inOut",
     attr: { d: "M 447.606 379.471 v 24.772 s -0.061 26.915 39.394 -53.243" },
