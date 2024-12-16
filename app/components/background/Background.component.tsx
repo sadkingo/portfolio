@@ -36,7 +36,7 @@ const Background = () => {
     };
   });
   return (
-    <div className="absolute flex w-full h-full -bottom-10 -z-1">
+    <div className="fixed flex w-full h-full -bottom-10 -z-1">
       <div
         ref={layerParentRef}
         className="relative flex justify-center w-full moving-layer scale-110"
