@@ -1,18 +1,9 @@
 import React from "react";
 import Card from "@components/card";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { neon } from "@neondatabase/serverless";
 
 const About = () => {
-  async function getData(query) {
-    "use server";
-    const sql = neon(`${process.env.DATABASE_URL}`);
-    const res = await sql(query);
-    
-    console.log(res);
-    return res;
-  }
-  getData("SELECT * FROM comments;");
+
   return (
     <div className="flex flex-col gap-6 shadow-md">
       <Card className="text-lg text-center">
@@ -76,6 +67,7 @@ const About = () => {
       <Card className="flex flex-wrap w-full gap-3 justify-center">
         <Icon height={40} width={40} icon="vscode-icons:file-type-html" />
         <Icon height={40} width={40} icon="devicon:css3" />
+        <Icon height={40} width={40} icon="vscode-icons:file-type-js-official" />
         <Icon height={40} width={40} icon="vscode-icons:file-type-scss2" />
         <Icon height={40} width={40} icon="skill-icons:bootstrap" />
         <Icon height={40} width={40} icon="devicon:tailwindcss" />
