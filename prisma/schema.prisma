@@ -6,11 +6,12 @@
 
 generator client {
   provider = "prisma-client-js"
+   previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
 }
 
 model User {
@@ -24,9 +25,12 @@ model User {
 }
 
 model Post {
-  id        Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   title     String
-  published Boolean @default(true)
+  published Boolean  @default(true)
   authorId  Int
-  author    User    @relation(fields: [authorId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deleted   Boolean  @default(false)
 }
