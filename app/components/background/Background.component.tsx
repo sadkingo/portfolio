@@ -24,7 +24,6 @@ const Background = () => {
 
     function moveEvent(e) {
       for (let i = 0; i < layers.length; i++) {
-        console.log(i);
         const dx = (window.innerWidth / 2 - e.pageX) / (80 / (i + 1));
         layers[i].style.transform = "translateX(" + dx + "px)";
       }
