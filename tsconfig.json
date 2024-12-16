@@ -23,7 +23,8 @@
     "paths": {
       "@/*": ["./*"],
       "@public/*": ["public/*"],
-      "@images/*": ["public/images/*"]
+      "@images/*": ["public/images/*"],
+      "@components/*": ["app/components/*"]
     }
   },
   "include": [
