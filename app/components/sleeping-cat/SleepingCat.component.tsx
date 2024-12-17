@@ -14,7 +14,7 @@ const SleepingCat = ({ className }) => {
 
   useEffect(() => {
     const currentStoredTheme = localStorage.getItem("theme");
-    if (currentStoredTheme === null) {
+    if (currentStoredTheme === undefined) {
       const osTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
