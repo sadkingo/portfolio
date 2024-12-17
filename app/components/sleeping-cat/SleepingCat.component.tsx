@@ -13,13 +13,14 @@ const SleepingCat = ({ className }) => {
   );
 
   useEffect(() => {
-    const currentStoredTheme = localStorage.getItem("theme");
+    let currentStoredTheme = localStorage.getItem("theme");
     if (currentStoredTheme === null) {
       const osTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
       localStorage.setItem("theme", osTheme);
       document.documentElement.setAttribute("data-theme", osTheme);
+      currentStoredTheme = osTheme;
     } else {
       document.documentElement.setAttribute("data-theme", currentStoredTheme);
     }
