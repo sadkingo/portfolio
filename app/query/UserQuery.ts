@@ -1,30 +1,38 @@
 import handleError from "@/util/handleError";
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 
-
-async function createUser({ name, gitToken }) {
+async function createUser(user: Prisma.UserCreateInput) {
   const prisma = new PrismaClient();
+  const { email, name, image } = user;
   try {
-    await prisma.user.create({
+    const user = await prisma.user.create({
       data: {
-        name: name,
-        gitToken: gitToken,
+        email,
+        name,
+        image,
       },
     });
+    return user;
   } catch (error) {
     handleError("Error creating user: " + error);
+    return null;
   } finally {
     await prisma.$disconnect();
   }
 }
 
-async function getUser({ gitToken }) {
+async function getUser({ email = "" }) {
   const prisma = new PrismaClient();
   try {
-    const user = await prisma.user.findFirst(gitToken);
+    const user = await prisma.user.findFirst({
+      where: {
+        email,
+      },
+    });
     return user;
   } catch (error) {
     handleError(error);
+    return null;
   } finally {
     await prisma.$disconnect();
   }
