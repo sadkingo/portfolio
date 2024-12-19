@@ -19,6 +19,28 @@ const Profile: FC = () => {
       <SleepingCatContainer className="absolute p-1 -translate-x-1/2 border shadow-2xl -top-14 left-1/2 h-14 bg-amber-600/50 dark:bg-blue-950/50" />
       {renderExtendButton()}
       {renderProfileInfo()}
+      {renderKeyInfo()}
+    </div>
+  );
+
+  function renderExtendButton() {
+    return (
+      <button
+        onClick={handlerOpenCloseInfo}
+        className="absolute top-0 right-0 p-2 rounded-tr-lg rounded-bl-lg shadow-xl bg-amber-600/80 dark:bg-blue-900/80 text-amber-400 hover:opacity-75"
+      >
+        <Icon
+          icon="lsicon:switch-outline"
+          height={30}
+          width={30}
+          className="rotate-90"
+        />
+      </button>
+    );
+  }
+
+  function renderKeyInfo() {
+    return (
       <div
         className={
           "transition-all overflow-hidden duration-700 profile-info max-h-96 " +
@@ -41,23 +63,9 @@ const Profile: FC = () => {
         <div className="text-white divider border-amber-500/70">SOCIAL</div>
         {renderSocialMedia()}
       </div>
-    </div>
-  );
-  function renderExtendButton() {
-    return (
-      <button
-        onClick={handlerOpenCloseInfo}
-        className="absolute top-0 right-0 p-2 rounded-tr-lg rounded-bl-lg shadow-xl bg-amber-600/80 dark:bg-blue-900/80 text-amber-400 hover:opacity-75"
-      >
-        <Icon
-          icon="lsicon:switch-outline"
-          height={30}
-          width={30}
-          className="rotate-90"
-        />
-      </button>
     );
   }
+
   function renderProfileInfo() {
     return (
       <div className="flex gap-5 md:flex-col profile md:mt-4">
@@ -146,6 +154,7 @@ const Profile: FC = () => {
       </div>
     );
   }
+  
   function renderStat({ statName, stat }) {
     return (
       <div className="flex flex-col justify-center">
