@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tab = ({
-  className = "",
+  className = "text-white",
   tabClassName = "",
   title,
   defaultChecked = false,
