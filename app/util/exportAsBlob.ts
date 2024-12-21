@@ -26,7 +26,7 @@ async function exportAsBlob({ editor, container }: Props) {
       bounds,
     },
   });
-  return URL.createObjectURL(img);
+  return img;
 }
 
 export default exportAsBlob;
