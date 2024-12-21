@@ -1,7 +1,9 @@
-import { toast } from "react-toastify";
-
-function handleError(error) {
-  toast.error(error);
+function handleError(error: unknown) {
+  if (error instanceof Error) {
+    console.error(error.message);
+  } else {
+    console.error("Error: Failed");
+  }
 }
 
 export default handleError;
