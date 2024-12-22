@@ -4,7 +4,6 @@ function getWithBaseUrl(endpoint: string): string {
     typeof window !== "undefined"
       ? ""
       : process.env.NEXT_APP_URL ?? "http://localhost:3000";
-  console.log(typeof window);
   return `${baseUrl}${endpoint}`;
 }
 
