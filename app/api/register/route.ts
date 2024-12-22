@@ -11,6 +11,7 @@ async function POST(request: Request): Promise<NextResponse> {
         { status: 400 },
       );
     }
+
     const user = await prisma.user.upsert({
       where: { email },
       update: {
@@ -21,6 +22,7 @@ async function POST(request: Request): Promise<NextResponse> {
         name,
       },
     });
+
     return NextResponse.json({ success: true, user }, { status: 201 });
   } catch {
     return NextResponse.json(

@@ -1,23 +1,31 @@
+import getWithBaseUrl from "@/util/getRelativePath";
 import handleError from "@/util/handleError";
 import { Prisma, PrismaClient } from "@prisma/client";
 
 async function createUser(user: Prisma.UserCreateInput) {
-  const prisma = new PrismaClient();
-  const { email, name, image } = user;
+  const { email, name } = user;
   try {
-    const user = await prisma.user.create({
-      data: {
-        email,
-        name,
-        image,
+    const response = await fetch(getWithBaseUrl(`api/register`), {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
       },
+      body: JSON.stringify({ email, name }),
     });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData);
+    }
+
+    const data = await response.json();
+    const user = data.user;
+
     return user;
+    
   } catch (error) {
-    handleError("Error creating user: " + error);
+    handleError(error);
     return null;
-  } finally {
-    await prisma.$disconnect();
   }
 }
 
