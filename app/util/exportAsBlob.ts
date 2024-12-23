@@ -22,6 +22,7 @@ async function exportAsBlob({ editor, container }: Props) {
     ids: [],
     format: "png",
     opts: {
+      background: false,
       padding: 0,
       bounds,
     },
