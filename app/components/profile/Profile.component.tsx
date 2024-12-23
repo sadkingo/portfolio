@@ -75,10 +75,10 @@ const Profile: FC = () => {
           alt="avatar"
         />
         <div className="flex flex-col gap-1 mt-2 my-info">
-          <span className="text-xl font-semibold text-gray-800 dark:text-white">
+          <span className="text-xl font-bold text-center text-white">
             Dhiab Mohammed Zakaria
           </span>
-          <span className="text-gray-300">
+          <span className="text-center text-gray-300">
             AKA:{" "}
             <span className="items-center font-bold text-center text-transparent select-auto bg-gradient-to-r dark:from-blue-800 from-amber-800 dark:to-purple-800 to-red-500 bg-clip-text">
               SaDKinG
@@ -158,10 +158,10 @@ const Profile: FC = () => {
   function renderStat({ statName, stat }) {
     return (
       <div className="flex flex-col justify-center">
-        <span className="font-bold text-gray-700 dark:text-gray-100">
+        <span className="font-bold text-gray-100">
           {statName}
         </span>
-        <span className="text-gray-100 dark:text-gray-200">{stat}</span>
+        <span className="text-gray-200">{stat}</span>
       </div>
     );
   }
