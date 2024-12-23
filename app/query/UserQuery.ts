@@ -1,8 +1,10 @@
 import getWithBaseUrl from "@/util/getRelativePath";
 import handleError from "@/util/handleError";
-import { Prisma, PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient, User } from "@prisma/client";
 
-async function createUser(user: Prisma.UserCreateInput) {
+async function createUser(
+  user: Prisma.UserCreateInput,
+): Promise<User | null> {
   const { email, name } = user;
   try {
     const response = await fetch(getWithBaseUrl(`api/register`), {
@@ -22,14 +24,13 @@ async function createUser(user: Prisma.UserCreateInput) {
     const user = data.user;
 
     return user;
-    
   } catch (error) {
     handleError(error);
     return null;
   }
 }
 
-async function getUser({ email = "" }) {
+async function getUser({ email = "" }): Promise<User | null> {
   const prisma = new PrismaClient();
   try {
     const user = await prisma.user.findFirst({
