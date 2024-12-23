@@ -34,4 +34,4 @@ async function POST(request: Request): Promise<NextResponse> {
   }
 }
 
-export { POST, MAX_FILE_SIZE };
+export { POST };
