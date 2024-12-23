@@ -17,12 +17,14 @@ async function uploadImage(imageBlob: Blob) {
     if (!response.ok) {
       throw new Error("Failed to upload image");
     }
+
     const {
       file: { url },
     } = await response.json();
     if (!url) {
       throw new Error("Failed to get image details");
     }
+
     return url;
   } catch (error) {
     handleError(error);
