@@ -2,14 +2,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import SignModal from "../sign-modal";
-import { Comment, Image } from "@prisma/client";
+import { Comment, Image, User } from "@prisma/client";
 
-interface CommentWithImage extends Comment {
+interface ExtendedComment extends Comment {
   image: Image;
+  author: User;
 }
 const Comments = ({ comments, currentUser }) => {
   const [currentComments, setCurrentComments] = useState<
-    CommentWithImage[] | null
+    ExtendedComment[] | null
   >(comments);
 
   return (
@@ -24,6 +25,7 @@ const Comments = ({ comments, currentUser }) => {
         {currentComments?.map((comment) => (
           <React.Fragment key={comment.id}>
             <div className="comment flex flex-col items-center p-4 border border-white m-4 rounded-lg bg-amber-600 dark:bg-blue-900">
+              <div className="text-xl font-bold">{comment.author.name}</div>
               {renderRating(comment.rating)}
               <div className="flex w-full flex-col items-center justify-between">
                 <div className="text-center text-lg">{comment.content}</div>

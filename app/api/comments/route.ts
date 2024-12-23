@@ -20,6 +20,7 @@ async function GET(request: Request): Promise<NextResponse> {
     take: pageSize,
     include: {
       image: true,
+      author: true,
     },
   });
 

@@ -54,6 +54,7 @@ async function POST(request: Request): Promise<NextResponse> {
       },
       include: {
         image: true,
+        author: true,
       },
     });
 
