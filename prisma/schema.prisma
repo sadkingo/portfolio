@@ -31,7 +31,8 @@ model Comment {
   authorId  Int
   author    User     @relation(fields: [authorId], references: [id])
   rating    Int
-  image     Image[]
+  image     Image?   @relation(fields: [imageId], references: [id])
+  imageId   String?  @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   deleted   Boolean  @default(false)
@@ -41,8 +42,6 @@ model Image {
   id        String   @id @default(cuid())
   filename  String
   url       String
-  size      Int
-  Comment   Comment? @relation(fields: [commentId], references: [id])
-  commentId Int?
+  comment   Comment? @relation
   createdAt DateTime @default(now())
 }
