@@ -19,7 +19,7 @@ const Tab = ({
       <div
         role="tabpanel"
         className={
-          "h-full p-6 tab-content  rounded-box bg-amber-600/50 dark:bg-blue-950/50 " +
+          "h-full p-6 tab-content overflow-auto rounded-box bg-amber-600/50 dark:bg-blue-950/50 " +
           className
         }
       >
