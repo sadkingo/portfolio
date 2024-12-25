@@ -3,6 +3,7 @@ import Profile from "@components/profile";
 import Tab from "@components/tab";
 import About from "@components/about";
 import Guestbook from "./components/guestbook";
+import MyWork from "./components/my-work";
 
 export default async function Home() {
   return (
@@ -15,7 +16,9 @@ export default async function Home() {
         <Tab title={"Guestbook"}>
           <Guestbook />
         </Tab>
-        <Tab title={"My work"}>contact</Tab>
+        <Tab title={"My work"}>
+          <MyWork />
+        </Tab>
       </Content>
     </div>
   );
