@@ -4,7 +4,7 @@
 
 ## 🚀 **Project Overview**
 
-**Portfolio** is a personal website designed to showcase my projects, skills, and achievements. Built with **HTML**, **CSS**, **JavaScript**, **React**, and **Laravel**, it serves as a dynamic and interactive platform to present my work. The front-end is powered by **React** for a smooth user experience, while **Laravel** manages the back-end for seamless data handling.
+**Portfolio** is a personal website designed to showcase my projects, skills, and achievements. Built **Next** and **React**, it serves as a dynamic and interactive platform to present my work.
 
 ---
 
@@ -12,19 +12,17 @@
 
 - **Project Showcase**: A section to display my projects with descriptions, images, and live links.
 - **Skills Section**: Highlights the technical skills used in my projects.
-- **Blog Integration**: A blog page powered by **Laravel** for sharing insights and updates.
-- **Contact Form**: A dynamic contact form connected to the back-end for easy communication.
 - **Responsive Design**: Fully optimized for all devices, ensuring a great user experience on any screen size.
 
 ---
 
 ## 🛠️ **Technologies Used**
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+- **NextJs**
 - **React**
-- **Laravel**
+- **HTML5**
+- **Tailwind**
+- **JavaScript**
 
 ---
 
@@ -41,7 +39,6 @@
 3. Install dependencies for both front-end and back-end:
    ```bash
    npm install     # For React
-   composer install # For Laravel
    ```
 4. Set up the environment:
 
@@ -51,10 +48,6 @@
    - For React:
      ```bash
      npm start
-     ```
-   - For Laravel:
-     ```bash
-     php artisan serve
      ```
 
 ---
