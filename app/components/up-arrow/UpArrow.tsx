@@ -2,7 +2,7 @@
 import { Icon } from "@iconify/react";
 import React, { FC} from "react";
 
-const MobileNavMenu: FC = () => {
+const UpArrow: FC = () => {
   return (
     <div className="md:hidden">
       <a
@@ -20,4 +20,4 @@ const MobileNavMenu: FC = () => {
   );
 };
 
-export default MobileNavMenu;
+export default UpArrow;
